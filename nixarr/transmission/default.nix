@@ -475,7 +475,7 @@ in {
           to = cfg.uiPort;
         }
       ];
-      openVPNPorts = [
+      openVPNPorts = mkIf (cfg.peerPort != null) [
         {
           port = cfg.peerPort;
           protocol = "both";
